@@ -1,0 +1,33 @@
+
+.nav{
+    background-color: cadetblue;
+    margin-bottom: 20px;
+
+}
+
+.nav_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub_nav{
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul_sub_nav{
+    list-style-type: none;
+}
+
+.li_sub_nav{
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.li_sub_nav a{
+    text-decoration: none;
+}
