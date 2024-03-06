@@ -6,4 +6,63 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .secao_principal{
+        background-color: darkgoldenrod;
+        display: flex;
+    }
+
+    .recentes_home{
+        background-color: chartreuse;
+        width: 70%;
+        padding-left: 50px;
+    }
+
+    .emDestaque_home{
+        background-color: brown;
+        width: 30%;
+    }
+
+    .sessao_mais{
+        background-color: coral;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+    .sessao_redator{
+        background-color: darkgoldenrod;
+        width: 100%;
+    }
+
+    .sessao_artigos{
+        background-color: deeppink;
+        display: flex;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+    }
+
+    .desencolvimento_pessoal{
+        background-color: green;
+        width: 50%;
+    }
+
+    .tecnologia{
+        background-color: blue;
+        width: 50%;
+    }
+
+    .bem_estar{
+        background-color: blueviolet;
+        width: 50%;
+    }
+
+    .viagem{
+        background-color: gold;
+        width: 50%;
+    }
+
+    
 }

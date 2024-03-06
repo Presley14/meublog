@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('artigos', function (Blueprint $table) {
             $table->id()->autoIncrement()->unsigned();
-            $table->bigInteger('id_categoria')->nullable(true)->default(null);
+            $table->string('categoria_do_artigo')->nullable(true)->default(null);
             $table->string('seo_titulo', 1000)->nullable(true)->default(null);
             $table->string('seo_descricao', 1000)->nullable(true)->default(null);
             $table->string('seo_keys', 1000)->nullable(true)->default(null);
-            $table->string('texto_artigo', 3000)->nullable(true)->default(null);
+            $table->string('url_imagem')->nullable(true)->default(null);
+            $table->longText('texto_artigo')->nullable(true)->default(null);
             $table->dateTime('created_at')->nullable(true)->default(null);
             $table->dateTime('updated_at')->nullable(true)->default(null);
             $table->dateTime('deleted_at')->nullable(true)->default(null);

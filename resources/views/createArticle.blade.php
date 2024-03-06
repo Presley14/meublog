@@ -3,73 +3,91 @@
   
   <div class="container_article">
     <section>
-      <h1>Criar novo artigo</h1>
+      <div class="titulo_criar_artigo_caixa">
+          <h1 class="titulo_criar_artigo">Criar novo artigo</h1>
+      </div>
+
     </section>
     <hr>
-    <form method="POST" action="{{ route('form_criar_artigo')}}">
+    <form method="POST" action="{{ route('form_criar_artigo')}}" class="form_artigo">
         @csrf
-        <div>
-          <div>
-            <label for="select_category">Selecione a categoria do artigo:</label>
-            <select name="select_category" id="select_category" required>
-              <option value="">Selecionar:</option>
-              @foreach ($category as $categoria)
-                  <option value="{{ $categoria->id }}" {{ old('select_category') == $categoria->id ? 'selected' : '' }}>
-                      {{ $categoria->nome_categoria }}
-                  </option>
-              @endforeach
-            </select>
-            @error('select_category')
-                @foreach($errors->get('select_category') as $error)
-                    <div>{{ $error }}</div>
+        <button class="btn_criar_artigo" type="submit">Enviar dados do formulário</button>
+        <div class="form_main">
+          <div class="categoria_url">
+            <div class="input_form_artigo_caixa">
+              <label for="select_category">Selecione a categoria do artigo:</label>
+              <select class="input_form_artigo" name="select_category" id="select_category" required>
+                <option value="">Selecionar:</option>
+                @foreach ($category as $categoria)
+                    <option value="{{ $categoria->nome_categoria }}" {{ old('select_category') == $categoria->nome_categoria ? 'selected' : '' }}>
+                        {{ $categoria->nome_categoria }}
+                    </option>
                 @endforeach
-            @enderror
+              </select>
+              @error('select_category')
+                  @foreach($errors->get('select_category') as $error)
+                      <div>{{ $error }}</div>
+                  @endforeach
+              @enderror
+            </div>
+            <div class="input_form_artigo_caixa">
+              <label for="url_imagem_capa">URL da imagem de capa</label>
+              <input class="input_form_artigo" type="text" name="url_imagem_capa" required placeholder="...">
+              @error('url_imagem_capa')
+                  @foreach($errors->get('url_imagem_capa') as $error)
+                      <div>{{ $error }}</div>
+                  @endforeach
+              @enderror
+            </div>
           </div>
-          <div>
-            <label for="seo_title">SEO-Title:</label>
-            <input type="text" name="seo_title" id="seo_title" required value="{{ old('seo_title') }}">
-            @error('seo_title')
-                @foreach($errors->get('seo_title') as $error)
-                    <div>{{ $error }}</div>
-                @endforeach
-            @enderror
+          <div class="categoria_url">
+            <div class="input_form_artigo_caixa">
+              <label for="seo_title">SEO-Title:</label>
+              <input class="input_form_artigo" type="text" name="seo_title" id="seo_title" required placeholder="..." required value="{{ old('seo_title') }}">
+              @error('seo_title')
+                  @foreach($errors->get('seo_title') as $error)
+                      <div>{{ $error }}</div>
+                  @endforeach
+              @enderror
+            </div>
+            <div class="input_form_artigo_caixa">
+              <label for="seo_keys">SEO-Palavras chave:</label>
+              <input class="input_form_artigo" type="text" name="seo_keys" id="seo_keys" required required placeholder="..." value="{{ old('seo_keys') }}">
+              @error('seo_keys')
+                  @foreach($errors->get('seo_keys') as $error)
+                      <div>{{ $error }}</div>
+                  @endforeach
+              @enderror
+            </div>
           </div>
-          <div>
+
+          <div class="input_form_description_caixa">
             <label for="seo_description">SEO-Descrição:</label>
-            <input type="text" name="seo_description" id="seo_description" required value="{{ old('seo_description') }}">
+            <input class="input_form_description" type="text" name="seo_description" id="seo_description" required placeholder="..." required value="{{ old('seo_description') }}">
             @error('seo_description')
                 @foreach($errors->get('seo_description') as $error)
                     <div>{{ $error }}</div>
                 @endforeach
             @enderror
           </div>
-          <div>
-            <label for="seo_keys">SEO-Palavras chave:</label>
-            <input type="text" name="seo_keys" id="seo_keys" required value="{{ old('seo_keys') }}">
-            @error('seo_keys')
-                @foreach($errors->get('seo_keys') as $error)
-                    <div>{{ $error }}</div>
-                @endforeach
-            @enderror
-          </div>
         </div>
-        <div>
-          <textarea  id="myeditorinstance" name="text_article"  placeholder="Inicie seu artigo...">{{ old('text_article') }}</textarea>
+        <div class="textarea_artigo">
+          <textarea class="textarea_height"  id="myeditorinstance" name="text_article"  placeholder="Inicie seu artigo...">{{ old('text_article') }}</textarea>
           @error('text_article')
               @foreach($errors->get('text_article') as $error)
                   <div>{{ $error }}</div>
               @endforeach
           @enderror
         </div>
-        <button type="submit">Enviar dados do formulário</button>
+        
     </form>
 
     @if(session('success'))
-    <div id="popup" style="display: block; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #8fd35f; padding: 20px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 9999;">
-      <h3>Artigo criado com sucesso!</h3>
-      <button onclick="fecharPopup()">Fechar</button>
-    </div>
-  @endif
+      <div id="popup" style="display: block; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #8fd35f; padding: 20px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 9999;">
+        <h3>Artigo criado com sucesso!</h3>
+        <button class="btn_criar_artigo" onclick="fecharPopup()">Fechar</button>
+      </div>
+    @endif
 
   </div>
   

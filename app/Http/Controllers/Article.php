@@ -26,10 +26,11 @@ class Article extends Controller
     {
         $request->validate(
             [
-                'text_article' => 'required|min:600', // obs: o textarea já contém 8 caracteres incluso.
+                'text_article' => 'required|min:6', // obs: o textarea já contém 8 caracteres incluso.
                 'seo_title' => 'required|min:3',
                 'seo_description' => 'required|min:3',
                 'seo_keys' => 'required|min:10',
+                'url_imagem_capa' => 'required'
             ],
             [
                 'text_article.required' => 'O campo é de preenchimento obrigatório.',
@@ -43,13 +44,16 @@ class Article extends Controller
 
                 'seo_keys.required' => 'O campo é de preenchimento obrigatório.',
                 'seo_keys.min' => 'O campo deve conter mo mínimo 10 caracteres',
+
+                'url_imagem_capa.required' => 'O campo é de preenchimento obrigatório.',
             ]);
         
         $title_seo = $request->input('seo_title');
         $description_seo = $request->input('seo_description');
         $keys_seo = explode(',', $request->input('seo_keys'));
         $text_article = $request->input('text_article');
-        $id_category = $request->input('select_category');
+        $categoria_do_artigo = $request->input('select_category');
+        $url_imagem_capa = $request->input('url_imagem_capa');
 
         SEOTools::setTitle($title_seo);
         SEOTools::setDescription($description_seo);
@@ -67,10 +71,11 @@ class Article extends Controller
         }
 
         $model = new ArticleModel();
-        $model->id_categoria = $id_category;
+        $model->categoria_do_artigo = $categoria_do_artigo;
         $model->seo_titulo = $title_seo;
         $model->seo_descricao = $description_seo;
         $model->seo_keys = implode(',', $keys_seo);
+        $model->url_imagem = $url_imagem_capa;
         $model->texto_artigo = $text_article;
         $model->created_at = date('Y-m-d H:i:s');
         $model->save();

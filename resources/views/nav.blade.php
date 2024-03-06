@@ -10,6 +10,12 @@
         </div>        
     </div>
 
+    <div>
+        <a href="{{ route('index') }}">home</a>
+        <br>
+        <a href="{{ route('createArticle') }}">criar artigo</a>
+    </div>
+
     <section class="sub_nav">
         <ul class="ul_sub_nav">
             <li class="li_sub_nav"><a href="">Início</a></li>
