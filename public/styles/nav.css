@@ -1,6 +1,6 @@
 
 .nav{
-    background-color: cadetblue;
+    background-color:#222222;
     margin-bottom: 20px;
 
 }
@@ -9,13 +9,33 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
+}
+
+.conexaoUniversal_a{
+    text-decoration: none;
+}
+
+.titulo_nav{
+    color: rgb(35, 115, 235);
+    font-size: 30px;
+
+    border: solid 1px rgb(35, 115, 235);
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 5px;
+    
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .sub_nav{
-    background-color: cornflowerblue;
+    background-color: rgb(71, 124, 246);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .ul_sub_nav{
@@ -26,8 +46,93 @@
     display: inline-block;
     text-decoration: none;
     margin: 0 10px;
+    
 }
 
 .li_sub_nav a{
     text-decoration: none;
+    color: white;
+}
+
+.li_sub_nav a:hover{
+    color: #222222;
+    transition: color 0.8s ease;
+}
+
+.label_pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img_tracov{
+    filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+    width: 35px;
+    height: 35px;
+}
+
+.img_lupa{
+    width: 30px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    transition: filter 1s ease;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+}
+
+.img_lupa:hover{
+    filter: invert(100%);
+}
+
+
+.img_x{
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+}
+
+.img_x:hover{
+    filter: invert(100%);
+    
+}
+
+
+.barra_vertical{
+    font-size: 30px;
+}
+
+.input_pesquisa{
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 0;
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse a largura definida */
+    transition: width 0.5s ease;
+}
+
+.input_pesquisa {
+    width: 100%; /* Define a largura para 100% quando o elemento possui a classe expandido */
+}
+
+.caixa_img{
+    display: flex;
+}
+
+.input_caixa{
+    width: 40%;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.input_pesquisa:hover{
+    border: solid 1px rgb(75, 123, 228);
 }

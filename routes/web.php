@@ -14,3 +14,7 @@ Route::post('/form_criar_artigo', [Article::class, 'form_criar_artigo'])->name('
 
 Route::get('/artigo/{id}', [ Main::class, 'showArticle'])->name('showArticle');
 
+Route::get('/tecnologia', [ Main::class, 'categoriaTecnolongia'])->name('categoriaTecnolongia');
+Route::get('/Desenvolvimento-pessoal', [ Main::class, 'desenvolvimento_pessoal'])->name('desenvolvimento_pessoal');
+Route::get('/Bem-estar', [ Main::class, 'bemEstar'])->name('bemEstar');
+Route::get('/Viagem', [ Main::class, 'viagem'])->name('viagem');
