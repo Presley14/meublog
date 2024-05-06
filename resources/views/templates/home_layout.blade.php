@@ -8,11 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Maven+Pro:wght@400..900&family=Potta+One&family=Rubik+Maps&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="{{ asset('styles/home_layout.css') }}">
     
-    <link rel="stylesheet" href="{{ asset('styles/home.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/nav.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/home_layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/categoryArticle.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('styles/style_tablet/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_tablet/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_tablet/articlePesquisa.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('styles/style_cell/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cell/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cell/footer.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('styles/style_cellSmall/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cellSmall/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cellSmall/footer.css') }}">
+
     <title>{{ $title }}</title>
 </head>
 <body>

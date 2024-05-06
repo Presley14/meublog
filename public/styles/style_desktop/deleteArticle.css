@@ -1,0 +1,87 @@
+
+    html, body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .containeirManagement{
+        background-color: #222222;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lista_article{
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(71, 124, 246);
+        padding: 30px;
+        border-radius: 5px;
+    }
+
+    .titulo_manage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+
+    .card_lista{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .link_delete{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+    }
+
+    .seo_titulo{
+        padding-left: 10px;
+    }
+
+    .link_delete_caixa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+
+    .link_delete:hover{
+        background-color: rgb(220, 32, 32);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .voltar_criar{
+        background-color: #5b5959;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .voltar_criar:hover{
+        background-color: rgb(13, 13, 13);
+    }
+
+    .caixa_voltar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    

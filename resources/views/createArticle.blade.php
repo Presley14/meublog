@@ -5,17 +5,21 @@
     <section>
       <div class="titulo_criar_artigo_caixa">
           <h1 class="titulo_criar_artigo">Criar novo artigo</h1>
+          <div>
+            <a class="deletar_artigo" href="{{ route('deleteArticle') }}">Excluir artigo</a>
+            <a class="deletar_artigo" href="{{ route('logout') }}">Sair</a>
+          </div>
       </div>
-
     </section>
-    <hr>
     <form method="POST" action="{{ route('form_criar_artigo')}}" class="form_artigo">
         @csrf
-        <button class="btn_criar_artigo" type="submit">Enviar dados do formulário</button>
+        <div class="btn_criar_artigo_caixa">
+          <button class="btn_criar_artigo" type="submit">Enviar dados do formulário</button>
+        </div>
         <div class="form_main">
           <div class="categoria_url">
             <div class="input_form_artigo_caixa">
-              <label for="select_category">Selecione a categoria do artigo:</label>
+              <label  for="select_category">Selecione a categoria do artigo:</label>
               <select class="input_form_artigo" name="select_category" id="select_category" required>
                 <option value="">Selecionar:</option>
                 @foreach ($category as $categoria)
@@ -32,7 +36,7 @@
             </div>
             <div class="input_form_artigo_caixa">
               <label for="url_imagem_capa">URL da imagem de capa</label>
-              <input class="input_form_artigo" type="text" name="url_imagem_capa" required placeholder="...">
+              <input class="input_form_artigo" type="text" name="url_imagem_capa" required placeholder="Inserir">
               @error('url_imagem_capa')
                   @foreach($errors->get('url_imagem_capa') as $error)
                       <div>{{ $error }}</div>
@@ -43,19 +47,19 @@
           <div class="categoria_url">
             <div class="input_form_artigo_caixa">
               <label for="seo_title">SEO-Title:</label>
-              <input class="input_form_artigo" type="text" name="seo_title" id="seo_title" required placeholder="..." required value="{{ old('seo_title') }}">
+              <input class="input_form_artigo" type="text" name="seo_title" id="seo_title" required placeholder="Inserir" required value="{{ old('seo_title') }}">
               @error('seo_title')
                   @foreach($errors->get('seo_title') as $error)
-                      <div>{{ $error }}</div>
+                      <div class="texto-erro">{{ $error }}</div>
                   @endforeach
               @enderror
             </div>
             <div class="input_form_artigo_caixa">
               <label for="seo_keys">SEO-Palavras chave:</label>
-              <input class="input_form_artigo" type="text" name="seo_keys" id="seo_keys" required required placeholder="..." value="{{ old('seo_keys') }}">
+              <input class="input_form_artigo" type="text" name="seo_keys" id="seo_keys" required required placeholder="Inserir" value="{{ old('seo_keys') }}">
               @error('seo_keys')
                   @foreach($errors->get('seo_keys') as $error)
-                      <div>{{ $error }}</div>
+                      <div class="texto-erro">{{ $error }}</div>
                   @endforeach
               @enderror
             </div>
@@ -63,10 +67,10 @@
 
           <div class="input_form_description_caixa">
             <label for="seo_description">SEO-Descrição:</label>
-            <input class="input_form_description" type="text" name="seo_description" id="seo_description" required placeholder="..." required value="{{ old('seo_description') }}">
+            <input class="input_form_description" type="text" name="seo_description" id="seo_description" required placeholder="Inserir" required value="{{ old('seo_description') }}">
             @error('seo_description')
                 @foreach($errors->get('seo_description') as $error)
-                    <div>{{ $error }}</div>
+                    <div class="texto-erro">{{ $error }}</div>
                 @endforeach
             @enderror
           </div>
@@ -75,7 +79,7 @@
           <textarea class="textarea_height"  id="myeditorinstance" name="text_article"  placeholder="Inicie seu artigo...">{{ old('text_article') }}</textarea>
           @error('text_article')
               @foreach($errors->get('text_article') as $error)
-                  <div>{{ $error }}</div>
+                  <div class="texto-erro">{{ $error }}</div>
               @endforeach
           @enderror
         </div>
@@ -97,8 +101,8 @@
   <script>
     tinymce.init({
       selector: 'textarea',
-      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
       tinycomments_mode: 'embedded',
       tinycomments_author: 'Author name',
       mergetags_list: [
@@ -107,8 +111,6 @@
       ],
       ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
     });
-
-
 
   </script>
 

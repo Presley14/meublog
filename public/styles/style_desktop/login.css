@@ -1,0 +1,123 @@
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container_login{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(71, 124, 246);
+    }
+
+    .caixa_login{
+        background-color:#222222;
+        position: absolute;
+        top: 40vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px;
+        border-radius: 5px;
+        width: 70%;
+    }
+
+    .titulo_login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(71, 124, 246);
+    }
+
+    .input_login{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .btn_entrar_login{
+        text-decoration: none;
+        background-color: rgb(22, 108, 195);
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 15px;
+        border-radius: 3px;
+    }
+
+    .btn_cancela_login{
+        text-decoration: none;
+        background-color: rgb(91, 91, 91);
+        color: white;
+        padding: 10px;
+        margin-left: 15px;
+        border-radius: 3px;
+    }
+
+    .caixa_btn_login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn_entrar_login:hover{
+        background-color: rgb(22, 85, 147);
+        cursor: pointer;
+    }
+
+    .btn_cancela_login:hover{
+        background-color: rgb(63, 63, 63);
+    }
+
+    .input_input{
+        padding: 5px;
+        width: 300px;
+    }
+
+    .input_input_senha{
+        padding: 5px;
+        width: 300px;
+        margin-left: 8px;
+    }
+
+    .input_label{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+        color: rgb(71, 124, 246);
+    }
+
+
+    .texto-erro{
+        color: rgb(209, 24, 24);
+        display: block;
+        margin-bottom: 15px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login_error{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        color: rgb(209, 24, 24);
+        font-weight: bold;
+    }
+
+    .cadastro{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .cadastro:hover{
+        color: rgb(71, 124, 246);
+    }

@@ -1,0 +1,305 @@
+@media screen and ( min-width: 428px ) and (max-width: 768px){
+
+    .container_home{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/****  secao recentes  ****/
+    .recentes_home{
+        margin-top: 30px;
+    }
+
+    .recentes_caixa{
+        width: 100%;
+    }
+
+    .recentes_caixa a{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+
+    .recentes_caixa a:hover{
+        color: rgb(25, 89, 228);
+    }
+
+    .img_recente_caixa{
+        overflow: hidden;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img_recente_caixa:hover .img_recente{
+        transform: scale(1.3);
+        transition: transform 0.6s ease;
+    }
+
+    .img_recente{
+        transition: transform 0.6s ease;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        border-radius: 3px;
+    }
+
+    .categoria_do_artigo_caixa{
+        display: flex;
+    }
+
+    .categoria_do_artigo{
+        background: linear-gradient(to right, rgb(75, 123, 228) calc(100% - 10px), #363636 calc(100% - 10px));
+        display: inline-block;
+        color: white;
+        padding: 3px 20px 2px 10px;
+        border-radius: 3px 3px 0 0px;
+        font-size: 11px;
+    }
+
+    .titulo_recente{
+        margin-bottom: 5px;
+        font-size: 25px;
+        letter-spacing: -2px;
+    }
+
+    .created_at_linear{
+        font-size: 13px;
+        font-style: italic;
+        color: rgb(134, 134, 147);
+        font-weight: bold;   
+    }
+
+    .titulo_secao{
+      color: black;
+      padding: 5px 10px ;
+      border:  1px solid black;
+      display: inline-block;
+      border-radius: 5px;
+  }
+ 
+/**** recentes abaixo *****/
+
+    .recentes_home_vertical{
+        margin-bottom: 60px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img_destaque_vertical{
+        width: 150px;
+        height: 100px;
+        transition: transform 0.6s ease;
+        display: flex;
+        border-radius: 3px;
+    }
+
+    .img_titulo_recente_vertical{
+        overflow: hidden;
+        display: 
+        inline-block;
+    }
+    
+    .img_titulo_recente_vertical:hover .img_destaque_vertical{
+        transform: scale(1.3);
+        transition: transform 0.6s ease;
+    }
+
+    .recente_caixa_vertical a{
+        display: flex;
+        text-decoration: none;
+        color: black;
+    }
+
+    .recente_caixa_vertical a:hover{
+        color: rgb(75, 123, 228);
+    }
+
+    .created_at_caixa_vertical{
+        margin-left: 20px;
+        width: 60%;
+    }
+
+    .created_at_abaixo{
+        font-size: 13px;
+        font-style: italic;
+        color: rgb(134, 134, 147);
+        font-weight: bold;
+    }
+
+    /*** secao destaque ****/
+
+    .secao_destaque{
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      .secao_destaque h1{
+        color: black;
+      }
+
+      .card_destaque{
+        width: 370px;
+        max-height: 600px;
+        margin: 15px 5px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .img_card_destaque{
+        width: 370px;
+        height: 200px;
+        border-radius: 0px 3px 3px 3px;
+        transition: transform 0.5s ease;
+        display: flex;
+      }
+
+      .img_card_destaque_caixa:hover .img_card_destaque{
+        transform: scale(1.3);
+        transition: transform 0.5s ease;
+      }
+
+      .img_card_destaque_caixa{
+        display: inline-block;
+        overflow: hidden;        
+      }
+
+      .card_caixa{
+        display: flex;
+        flex-wrap: wrap;      
+      }
+
+      .card_destaque a{
+        color: black;
+        text-decoration: none;
+      }
+
+      .card_destaque a:hover{
+        color: rgb(50, 50, 254);
+      }      
+
+      .titulo_destaque{
+        margin-bottom: 5px;
+        font-size: 25px;
+      }
+/****  secao mais artigo  ****/
+
+      .secao_mais{
+        margin-bottom: 80px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .img_card_mais{
+        width: 150px;
+        height: 140px;
+        border-radius: 3px;
+        transition: transform 0.6s ease;
+        display: flex;
+      }
+
+      .img_card_mais_caixa{
+        overflow: hidden;
+        display: inline-block;
+        width: 150px;
+        height: 100px;
+      }
+
+      .img_card_mais_caixa:hover .img_card_mais{
+        transform: scale(1.3);
+        transition: transform 0.6s ease;
+      }
+
+      .card_mais_caixa{
+        margin-top: 15px;
+      }
+
+      .card_mais a{
+        display: flex;
+        margin-bottom: 20px;
+        color: black;
+        text-decoration: none;
+      }
+
+      .card_mais a:hover{
+        color: rgb(50, 50, 254);
+      }
+
+      .created_at_caixa_mais{
+        width: 60%;
+        margin-left: 20px;
+      }
+
+      .titulo_mais_artigo{
+        margin-bottom: 20px;
+      }
+
+      .created_at_mais{
+        font-size: 13px;
+        font-style: italic;
+        color: rgb(134, 134, 147);
+        font-weight: bold;
+      }
+
+/****  secao por artigo  ****/      
+
+      .secao_artigos{
+        background-color: #363636;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card_categoria{
+        margin: 10px;
+      }
+
+      .artigo_por_sesao{
+        background: linear-gradient(to right, rgb(75, 123, 228) calc(100% - 10px), #363636 calc(100% - 10px));
+        display: inline-block;
+        color: white;
+        padding: 3px 20px 2px 10px;
+        border-radius: 3px 3px 0 0px;
+        font-size: 11px;  
+      }
+
+      .link_img_por_secao{
+        width: 220px;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      .link_img_por_secao:hover .img_por_secao{
+        transform: scale(1.3);
+        transition: transform 0.6s ease;
+      }
+
+      .img_por_secao{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        transition: transform 0.6s ease;
+        border-radius: 3px;
+      }
+
+/**** imagem topo ****/
+    .img_topo{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 85vh;
+        left: 95%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        cursor: pointer;
+    }  
+
+}

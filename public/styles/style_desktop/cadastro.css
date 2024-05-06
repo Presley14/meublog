@@ -1,0 +1,118 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_login_cadastro{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(71, 124, 246);
+}
+
+.caixa_login_cadastro{
+    background-color:#222222;
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.titulo_login_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(71, 124, 246);
+}
+
+.input_login_cadastro{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.btn_entrar_login_cadastro{
+    text-decoration: none;
+    background-color: rgb(22, 108, 195);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.btn_cancela_login_cadastro{
+    text-decoration: none;
+    background-color: rgb(91, 91, 91);
+    color: white;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 3px;
+}
+
+.caixa_btn_login_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_entrar_login_cadastro:hover{
+    background-color: rgb(22, 85, 147);
+    cursor: pointer;
+}
+
+.btn_cancela_login_cadastro:hover{
+    background-color: rgb(63, 63, 63);
+}
+
+.input_input_cadastro{
+    padding: 5px;
+    width: 300px;
+}
+
+.input_input_cadastro_senha{
+    padding: 5px;
+    width: 300px;
+    margin-left: 8px;
+}
+
+.input_label_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    color: rgb(71, 124, 246);
+}
+
+
+.texto-erro_cadastro{
+    color: rgb(209, 24, 24);
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_error_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    color: rgb(209, 24, 24);
+    font-weight: bold;
+}
+
+.mensagem-erro_cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red; 
+    margin-top: 20px;
+}

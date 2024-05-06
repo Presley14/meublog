@@ -66,7 +66,7 @@
             <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ url()->current() }}" target="_blank" class="link_rede">
                 <img class="img_rede" src="{{ asset('images/in.png') }}" alt="topo">
             </a>
-            <a href="https://api.whatsapp.com/send?text={{ $article->seo_titulo }}{{ url()->current() }}" target="_blank" class="link_rede">
+            <a href="https://api.whatsapp.com/send?text={{ urlencode($article->seo_titulo . ' ' . url()->current()) }}" target="_blank" class="link_rede">
                 <img class="img_rede" src="{{ asset('images/zap.png') }}" alt="WhatsApp">
             </a>
             <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" target="_blank" rel="noopener noreferrer" class="link_rede">
@@ -77,6 +77,4 @@
             </a>
         </span>
     </section>
-
-    
 @endsection

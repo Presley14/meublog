@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="categoria_tecnologia">
-        <br><br><h2>Novidades tecnológicas</h2><br><br>
+        <br><br><h2>Soft Skills</h2><br><br>
         <div class="card_categorias_caixa">
             @foreach ($articles as $article)
                 <div class="card_categorias">

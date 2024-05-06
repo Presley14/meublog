@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('styles/nav.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/articlePage.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/articlePage_layout.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/articlePage.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/articlePage_layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_desktop/footer.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('styles/style_tablet/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_tablet/articlePage_tablet.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('styles/style_cell/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cell/articlePage.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cell/footer.css') }}">   
+
+    <link rel="stylesheet" href="{{ asset('styles/style_cellSmall/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cellSmall/articlePage.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/style_cellSmall/footer.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

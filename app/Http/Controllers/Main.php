@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\ArticleModel;
 use Illuminate\Http\Request;
 
+
 class Main extends Controller
 {
     public function index()
     {
-
         $articles = ArticleModel::orderBy('created_at', 'desc')
-                                ->get();
+                    ->get();
 
         $articles_recent = ArticleModel::orderBy('created_at', 'desc')
                                         ->take(1)
@@ -26,29 +26,27 @@ class Main extends Controller
                                         ->skip(0)
                                         ->take(9)
                                         ->get();
-                           
+                        
         $articles_more = ArticleModel::orderBy('created_at', 'desc')
                                     ->skip(0)
                                     ->take(10000)
-                                    ->get();                               
-                                              
+                                    ->get(); 
+
 
         $data = [
             'title' => 'topensando',
             'articles' => $articles,
             'articles_recent' => $articles_recent,
-            'articles_recent_vertical' => $articles_recent_vertical,
+            'articles_recent_vertical'=> $articles_recent_vertical,
             'articles_emphasis' => $articles_emphasis,
             'articles_more' => $articles_more,
         ];
-
-        return view('home', $data);
-    }
+                                                
+            return view('home', $data);                                    
+        }
 
     public function showArticle($id)
     {
-
-
         $article_id = ArticleModel::find($id);
 
         if (!$article_id) {
@@ -90,8 +88,8 @@ class Main extends Controller
 
     public function categoriaTecnolongia()
     {
-        $articles = ArticleModel::where('categoria_do_artigo', '=', 'Tecnologia-vital')
-                                ->get();
+        $articles = ArticleModel::where('categoria_do_artigo', '=', 'tecnologia')
+                                ->get();                    
         
         $data = [
             'title' => 'Tecnologia',
@@ -103,7 +101,7 @@ class Main extends Controller
 
     public function desenvolvimento_pessoal()
     {
-        $articles = ArticleModel::where('categoria_do_artigo', '=', 'Desenvolvimento pessoal')
+        $articles = ArticleModel::where('categoria_do_artigo', '=', 'desenvolvimentoPessoal')
                                 ->get();
         
         $data = [
@@ -114,29 +112,55 @@ class Main extends Controller
         return view('personalDevelopment', $data);
     }
 
-    public function bemEstar()
+    public function programadorHabilidoso()
     {
-        $articles = ArticleModel::where('categoria_do_artigo', '=', 'Bem-estar')
+        $articles = ArticleModel::where('categoria_do_artigo', '=', 'programadorHabilidoso')
                                 ->get();
         
         $data = [
-            'title' => 'Bem-estar',
+            'title' => 'Programador Habilidoso',
             'articles' => $articles,
         ];
 
-        return view('weelBeing', $data);
+        return view('programmerSkilled', $data);
     }
 
-    public function viagem()
+    public function softSkills()
     {
-        $articles = ArticleModel::where('categoria_do_artigo', '=', 'Férias')
+        $articles = ArticleModel::where('categoria_do_artigo', '=', 'softSkills')
                                 ->get();
         
         $data = [
-            'title' => 'Viagem',
+            'title' => 'Soft Skills',
             'articles' => $articles,
         ];
 
-        return view('trip', $data);
+        return view('softSkills', $data);
     }
+
+
+    public function pesquisar(Request $request)
+    {
+        $pesquisar = $request->input('input_pesquisa');
+
+        if($pesquisar == ''){
+            return redirect()->route('index');
+        }else{
+            $artigos = ArticleModel::where(function($query) use ($pesquisar){
+                                        $query->where('seo_titulo', 'like', '%' . $pesquisar . '%');
+                                    })
+                                    ->where('deleted_at')
+                                    ->get();       
+        }
+
+        $data = [
+            'artigos' => $artigos,
+            'title' => 'pesquisa',
+            'resultado_pesquisa' => $pesquisar,
+        ];
+
+        return view('articlePesquisa', $data);
+    }
+
+    
 }

@@ -5,20 +5,20 @@
                 <h3 class="footer_categoria">Categorias</h3>
                 <ul>   
                     <a class="footer_a" href="{{ route('desenvolvimento_pessoal')}}"><li class="footer_li">Desenvolvimento pessoal</li></a>
-                    <a class="footer_a" href="{{ route('categoriaTecnolongia')}}"><li class="footer_li">Tecnologia-vital</li></a>
-                    <a class="footer_a" href="{{ route('bemEstar')}}"><li class="footer_li">Bem-estar</li></a>
-                    <a class="footer_a" href="{{ route('viagem')}}"><li class="footer_li">Férias</li></a>
+                    <a class="footer_a" href="{{ route('categoriaTecnolongia')}}"><li class="footer_li">Novidades tecnológicas</li></a>
+                    <a class="footer_a" href="{{ route('programadorHabilidoso')}}"><li class="footer_li">Programador habilidoso</li></a>
+                    <a class="footer_a" href="{{ route('softSkills')}}"><li class="footer_li">Soft skills</li></a>
                 </ul>
             </div>
             <div class="footer_redator">
-                <h3 class="footer_redator">Redatores</h3>
+                <h3 class="footer_redator">Administrativo</h3>
                 <ul>
-                    <a class="footer_a" href=""><li class="footer_li">Presley Oliveira</li></a>
+                    <a class="footer_a" href="{{ asset('login') }}"><li class="footer_li">Redator</li></a>
                 </ul>
             </div>           
         </div>
         <div class="footer_site">
-            &copy; conexãoUniverso <span id="ano"></span>
+           &copy; linesofcode <span id="ano"></span>
         </div>
     </div>
     

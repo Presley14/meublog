@@ -1,0 +1,109 @@
+
+    .container_article{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color:#222222;
+
+    }
+
+    .titulo_criar_artigo{
+        padding: 20px;
+        color: white;
+    }
+
+    .titulo_criar_artigo_caixa{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(71, 124, 246);
+        flex-wrap: wrap;
+    }
+
+    .form_main{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .input_form_artigo{
+        padding: 10px;
+        border-radius: 5px;
+        width: 98%;
+        border: none;
+        margin-bottom: 10px;
+        margin-top: 7px;
+    }
+
+    .input_form_artigo_caixa{
+        width: 100%;
+        
+    }
+
+    .categoria_url{
+        display: flex;
+    }
+
+    .input_form_description{
+        width: 99%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 7px;
+    }
+
+    .textarea_artigo{
+        margin: 20px 0;
+    }
+
+    .textarea_height{
+        height: 1500px;
+    }
+
+    .btn_criar_artigo{
+        background-color: rgb(0, 164, 3);
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        color: white;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    .btn_criar_artigo_caixa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .btn_criar_artigo:hover{
+        background-color: rgb(0, 209, 14);
+        color: white;
+    }
+
+    .deletar_artigo{
+        background-color: rgb(117, 117, 117);
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    .deletar_artigo:hover{
+        background-color: rgb(28, 28, 28);
+        padding: 10px;
+    }
+
+    .texto-erro{
+        color: rgb(209, 24, 24);
+        display: block;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    label{
+        color: white;
+    }
+

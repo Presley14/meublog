@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+html, body{
+    background-color: white;
+}
+
+/*
+Pequenas telas: até 600px
+celular: de 600px até 768px
+Tablets: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes: acima de 1200px
+*/

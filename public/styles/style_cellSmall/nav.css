@@ -1,0 +1,325 @@
+/*Tablets: de 768px até 992px*/
+@media screen and ( min-width: 10px ) and (max-width: 428px){
+    
+
+    .nav{
+        background-color:#222222;
+    }
+
+    .nav_bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;        
+    }
+
+    .input_caixa_form{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sub_nav{
+        display: none;
+    }
+
+    .conexaoUniversal_a{
+        text-decoration: none;
+        
+    }
+
+    .titulo_nav{
+        color: rgb(35, 115, 235);
+        font-size: 20px;
+
+        border: solid 1px rgb(35, 115, 235);
+        background-color: #222222;
+        padding: 10px;
+        border-radius: 5px;
+        
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .caixa_img{
+        display: flex;
+    }
+
+    .btn_pesquisar{
+        position: relative;
+        right: 35px;
+        border: none;
+        background-color: white;
+        display: none;
+        cursor: pointer;
+    }
+
+
+/**/
+
+    .cel_pesq{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input_pesquisa_cel{
+        height: 35px;
+        padding-left: 10px;
+        border-radius: 5px;
+        width: 290px;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .img_lupa_dentro_cel{
+        width: 30px;
+        height: 30px;
+    }
+
+    .img_lupa_cel{
+        width: 30px;
+        height: 30px;
+        display: none;
+        cursor: pointer;
+        transition: filter 1s ease;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+    }
+
+    .input_caixa_form_cel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /**/
+
+    .img_lupa_dentro_cel{
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+        transition: filter 1s ease;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+    }
+
+    .img_lupa_dentro:hover{
+        filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+    }
+
+    .img_menu_tablete{
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        display: block;
+    }
+
+    .input_pesquisa{
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse a largura definida */
+        transition: width 0.5s ease;
+    }
+
+    .input_caixa_form{
+        display: flex;
+        align-items: center;
+    }
+
+    .input_pesquisa:hover{
+        border: solid 1px rgb(75, 123, 228);
+    }
+
+    .btn_pesquisar_cel{
+        position: relative;
+        right: 35px;
+        border: none;
+        background-color: white;
+        display: block;
+        cursor: pointer;
+        width: 20px;
+    }
+
+    .img_tracov{
+        filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+        width: 35px;
+        height: 35px;
+        display: none;
+    }
+
+    .img_lupa{
+        width: 30px;
+        height: 30px;
+        display: none;
+        cursor: pointer;
+        transition: filter 1s ease;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+    }
+
+    .img_lupa:hover{
+        filter: invert(100%);
+    }
+
+    .img_x{
+        display: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(79%) saturate(3440%) hue-rotate(191deg) brightness(103%) contrast(89%);
+    }
+
+    .img_x:hover{
+        filter: invert(100%);
+        
+    }
+
+    .barra_vertical{
+        font-size: 30px;
+    }
+
+    .caixa_img{
+        display: flex;
+    }
+
+    /* menu humburguer*/
+
+    .sub_nav_menu{
+        display: none;
+        position: absolute;
+        width: 50%;
+        background-color: rgb(75, 123, 228);
+        right: 0;
+        border-radius: 0 0 3px 3px;
+    }
+
+    .ul_sub_nav_menu{
+        margin-top: 50px;
+    }
+
+    .ul_sub_nav_menu a{
+        text-decoration: none;
+        color: #222222;
+        font-size: 20px;
+        width: 100%;
+        list-style: none;
+    }
+
+    .li_sub_nav_menu{
+        padding: 15px 0px 15px 15px;
+    }
+
+    .li_sub_nav_menu:hover{
+        background-color: #222222;
+        color: white;
+    }
+
+    .x_menu{
+        right: 0;
+        position: absolute;
+        display: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        padding: 10px 10px 0 0;
+    }
+    
+     /* Barra de pesquisa*/
+
+     .caixa_form_cel{
+        background-color: white;
+     }
+
+     .caixxa_pes_cel{
+        background-color: rgb(75, 123, 228);
+        height: 50px;
+        padding: 5px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .8s;
+    }
+
+    .pes_text_cel{
+        line-height: 40px;
+        padding: 0;
+        width: 0;
+        outline: none;
+        transition: .8s;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    .pes_btnn_cel{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: none;
+        
+    }
+
+    .caixxa_pes_cel:hover > .pes_text_cel{
+        width: 100%;
+        padding: 0 6px;
+    }
+
+    /**/
+
+    .caixa_form{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    .caixxa_pes{
+        background-color: rgb(75, 123, 228);
+        height: 50px;
+        padding: 5px;
+        border-radius: 40px;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .pes_text{
+        line-height: 40px;
+        padding: 0;
+        width: 0;
+        outline: none;
+        transition: .5s;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 16px;
+        display: none;
+    }
+
+    .pes_btnn{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: none;
+        
+    }
+
+    .caixxa_pes:hover > .pes_text{
+        width: 100px;
+        padding: 0 6px;
+        display: none;
+    }
+}
+
