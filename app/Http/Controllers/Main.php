@@ -34,7 +34,7 @@ class Main extends Controller
 
 
         $data = [
-            'title' => 'topensando',
+            'title' => 'Linhas de Código',
             'articles' => $articles,
             'articles_recent' => $articles_recent,
             'articles_recent_vertical'=> $articles_recent_vertical,

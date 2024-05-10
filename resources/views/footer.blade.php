@@ -18,7 +18,7 @@
             </div>           
         </div>
         <div class="footer_site">
-           &copy; linesofcode <span id="ano"></span>
+           &copy; Linhas de Código <span id="ano"></span>
         </div>
     </div>
     

@@ -1,7 +1,7 @@
 <nav class="nav">
     <div class="nav_bar">
         <div class="conexaoUniversal_a_caixa">
-            <a class="conexaoUniversal_a" href="{{ route('index')}}"><h1 class="titulo_nav">linesOfCode</h1></a>
+            <a class="conexaoUniversal_a" href="{{ route('index')}}"><h1 class="titulo_nav">linhasDeCódigo</h1></a>
         </div>
         <div class="input_caixa">
             <form class="input_caixa_form" action="{{ route('pesquisar') }}" method="POST">

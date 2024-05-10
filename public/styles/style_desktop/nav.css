@@ -228,9 +228,10 @@
         outline: none;
         transition: .5s;
         border: none;
-        background: none;
+        background-color: transparent;
         color: white;
         font-size: 16px;
+        border-radius: 40px;
     }
 
     .pes_btnn{
