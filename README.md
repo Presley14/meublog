@@ -76,9 +76,10 @@ Contribuições são bem-vindas! Para contribuir:
 Nome: Elvis Presley
 Email: flashatemporal@gmail.com
 
-Link do Projeto: https://www.linhasdecodigo.com
-Link do GitHub: https://github.com/Presley14/meublog
-
+- Link do Projeto: https://www.linhasdecodigo.com
+- Link do GitHub: https://github.com/Presley14/meublog
+- Link do meu Potfólio: https://github.com/Presley14/meu-portifolio
+  
 ## Observação
 
 - Ao traduzir a página nomes poderão mudar. Não recomendo traduzir para o português enquanto estiver lendo esse readme.
