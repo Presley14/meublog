@@ -73,9 +73,11 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## Contato
 
-Nome: Elvis Presley – flashatemporal@gmail.com
+Nome: Elvis Presley
+Email: flashatemporal@gmail.com
 
-Link do Projeto: https://github.com/Presley14/meublog
+Link do Projeto: https://www.linhasdecodigo.com
+Link do GitHub: https://github.com/Presley14/meublog
 
 ## Observação
 

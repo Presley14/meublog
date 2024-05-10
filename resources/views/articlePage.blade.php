@@ -21,16 +21,16 @@
                     <p>{!! $article->texto_artigo !!}</p>
                 </div>
                 <div class="pagina_artigo_mais">
-                    @foreach($art_vertical_id_ as $article)
+                    @foreach($art_vertical_id_ as $article_vertical)
                         <div class="card_artigo_vertical">
                             <div class="categoria_do_artigo_caixa">
-                                <h4 class="categoria_do_artigo">{{ $article->categoria_do_artigo }}</h4>
+                                <h4 class="categoria_do_artigo">{{ $article_vertical->categoria_do_artigo }}</h4>
                             </div>
-                            <a href="{{ route('showArticle', ['id' => $article->id]) }}">
+                            <a href="{{ route('showArticle', ['id' => $article_vertical->id]) }}">
                                 <div class="img_pagina_mais_caixa">
-                                    <img class="img_pagina_mais" src="{{ $article->url_imagem}}" alt="">
+                                    <img class="img_pagina_mais" src="{{ $article_vertical->url_imagem}}" alt="">
                                 </div>
-                                <h2 class="pagina_artigo_vertical">{{ $article->seo_titulo }}</h2>
+                                <h2 class="pagina_artigo_vertical">{{ $article_vertical->seo_titulo }}</h2>
                             </a>
                         </div>
                     @endforeach
@@ -40,18 +40,18 @@
         <div>
             <hr class="hr_recomenda">
             <div class="card_recomenda_caixa">
-                @foreach ($articles_emphasis as $article)
+                @foreach ($articles_emphasis as $article_emphasis)
                     <div class="card_recomenda">
                         <div class="categoria_do_artigo_caixa">
-                            <h4 class="categoria_do_artigo">{{ $article->categoria_do_artigo }}</h4>
+                            <h4 class="categoria_do_artigo">{{ $article_emphasis->categoria_do_artigo }}</h4>
                         </div>
-                        <a href="{{ route('showArticle', ['id' => $article->id]) }}">
+                        <a href="{{ route('showArticle', ['id' => $article_emphasis->id]) }}">
                             <div class="img_recomenda_caixa">  
-                                <img class="img_card_recomenda" src="{{ $article->url_imagem }}" alt="{{ $article->seo_titulo }}">                            
+                                <img class="img_card_recomenda" src="{{ $article_emphasis->url_imagem }}" alt="{{ $article->seo_titulo }}">                            
                             </div>
                             <div class="created_at_caixa_recomenda">
-                                <h2 class="titulo_mais_recomenda">{{ $article->seo_titulo }}</h2>
-                                <p class="created_at_recomenda">{{ $article->created_at->format('d-m-Y') }}</p>
+                                <h2 class="titulo_mais_recomenda">{{ $article_emphasis->seo_titulo }}</h2>
+                                <p class="created_at_recomenda">{{ $article_emphasis->created_at->format('d-m-Y') }}</p>
                             </div>
                         </a>                        
                     </div>
